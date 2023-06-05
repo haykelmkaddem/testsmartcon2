@@ -1,0 +1,85 @@
+<section class="wrapper bg-gray">
+  <div class="container py-14 pt-md-0 pb-md-16">
+    <div class="row mt-md-n50p mb-14 mb-md-7">
+      <div class="col-xl-10 mx-auto">
+        <div
+          class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400"
+          data-image-src="../../assets/img/photos/bg2.jpg"
+          style="background-image: url('./assets/img/photos/bg2.jpg')"
+        >
+          <div class="card-body p-9 p-xl-11">
+            <div
+              class="row align-items-center counter-wrapper gy-8 text-center text-white"
+            >
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">7518</h3>
+                <p>Completed Projects</p>
+              </div>
+              <!--/column -->
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">3472</h3>
+                <p>Happy Customers</p>
+              </div>
+              <!--/column -->
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">2184</h3>
+                <p>Expert Employees</p>
+              </div>
+              <!--/column -->
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">4523</h3>
+                <p>Awards Won</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row text-center">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">Case Studies</h2>
+        <h3 class="display-4 mb-6">
+          Check out some of our awesome projects with creative ideas and great
+          design.
+        </h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="position-relative">
+      <div
+        class="shape bg-dot primary rellax w-17 h-20"
+        data-rellax-speed="1"
+        style="top: 0; left: -1.7rem"
+      ></div>
+      <div
+        class="carousel owl-carousel gap-small blog grid-view"
+        data-margin="0"
+        data-dots="true"
+        data-autoplay="false"
+        data-autoplay-timeout="5000"
+        data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'
+      >
+        <app-project-card
+          *ngFor="let card of cardsArray"
+          [image]="card.image!"
+          [title]="card.title"
+          [description]="card.description!"
+          [link]="card.link!"
+          [date]="card.date!"
+          [postcomment]="card.postcomment!"
+        ></app-project-card>
+        <!-- /.item -->
+      </div>
+      <!-- /.owl-carousel -->
+    </div>
+    <!-- /.position-relative -->
+  </div>
+  <!-- /.container -->
+</section>
